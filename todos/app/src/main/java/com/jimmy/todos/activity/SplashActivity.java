@@ -1,4 +1,4 @@
-package com.jimmy.todos;
+package com.jimmy.todos.activity;
 
 import android.animation.Animator;
 import android.animation.ObjectAnimator;
@@ -8,6 +8,7 @@ import android.databinding.DataBindingUtil;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 
+import com.jimmy.todos.R;
 import com.jimmy.todos.base.BaseActivity;
 import com.jimmy.todos.databinding.SplashBinding;
 
@@ -66,12 +67,17 @@ public class SplashActivity extends BaseActivity {
         TimerTask task = new TimerTask() {
             @Override
             public void run() {
-                Intent intent = new Intent(SplashActivity.this, MainActivity.class);
+                Intent intent = new Intent(SplashActivity.this, HomeActivity.class);
                 startActivity(intent);
                 finish();
             }
         };
         Timer timer = new Timer();
         timer.schedule(task, 1000);
+    }
+
+    @Override
+    public void onBackPressed() {
+        //不让用户退出
     }
 }
