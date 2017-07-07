@@ -25,7 +25,7 @@ public class HomeListAdapter extends BaseAdapter {
         this.context = context;
     }
 
-    public void setData(Context context, ArrayList<HomeListItem> data) {
+    public void setData(ArrayList<HomeListItem> data) {
         this.data = data;
 
     }
@@ -55,6 +55,8 @@ public class HomeListAdapter extends BaseAdapter {
         } else {
             binding = (HomeListBinding) convertView.getTag();
         }
+        HomeListItem item = data.get(position);
+        binding.tvItem.setText(item.name);
         return binding.getRoot();
     }
 }
