@@ -10,6 +10,8 @@ import android.os.Parcelable;
 public class HomeListItem implements Parcelable {
     public boolean isDone;
     public String name;
+    public long createTime;
+
 
     @Override
     public int describeContents() {
@@ -20,6 +22,7 @@ public class HomeListItem implements Parcelable {
     public void writeToParcel(Parcel dest, int flags) {
         dest.writeByte(this.isDone ? (byte) 1 : (byte) 0);
         dest.writeString(this.name);
+        dest.writeLong(this.createTime);
     }
 
     public HomeListItem() {
@@ -28,6 +31,7 @@ public class HomeListItem implements Parcelable {
     protected HomeListItem(Parcel in) {
         this.isDone = in.readByte() != 0;
         this.name = in.readString();
+        this.createTime = in.readLong();
     }
 
     public static final Parcelable.Creator<HomeListItem> CREATOR = new Parcelable.Creator<HomeListItem>() {
