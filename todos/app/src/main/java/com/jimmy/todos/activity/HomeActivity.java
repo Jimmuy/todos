@@ -19,7 +19,6 @@ import java.util.Date;
 
 public class HomeActivity extends BaseActivity {
     private static final String TODO_LIST = "todo_list";
-
     private HomeBinding binding;
     private ArrayList<HomeListItem> data = new ArrayList<HomeListItem>();
     private HomeListAdapter adapter;

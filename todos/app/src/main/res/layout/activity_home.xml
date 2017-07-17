@@ -17,13 +17,13 @@
             android:orientation="vertical">
 
             <ImageView
-                android:focusable="true"
-                android:focusableInTouchMode="true"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginBottom="50dp"
                 android:layout_marginTop="100dp"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
                 android:src="@mipmap/home_icon" />
 
             <LinearLayout
@@ -33,7 +33,6 @@
                 android:orientation="vertical">
 
                 <com.jimmy.todos.widget.RightButtonEditText
-                    android:paddingRight="5dp"
                     android:id="@+id/et_home"
                     android:layout_width="match_parent"
                     android:layout_height="60dp"
@@ -42,6 +41,7 @@
                     android:background="@drawable/common_shadow"
                     android:hint="@string/home_edit_hint"
                     android:paddingLeft="15dp"
+                    android:paddingRight="5dp"
                     android:singleLine="true"
                     android:textColorHint="@color/gray"
                     android:textCursorDrawable="@null" />
